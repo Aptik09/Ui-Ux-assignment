@@ -17,4 +17,4 @@ Your web page layout should be like contain website
 ● Section 3: Skills (List with styled bullets/icons) 
 ● Section 4: Projects (Text + link + optional image)  
 ● Section 5: Contact (Email, social media links) 
-● Footer: “Made by [Your Name]”          
+● Footer: "Made by Aptik Pandey"          
