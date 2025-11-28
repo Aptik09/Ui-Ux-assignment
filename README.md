@@ -17,3 +17,7 @@ Demo: https://techfusion-2026-a4-ui-ux.vercel.app/
 
 #Assignment 5
 Code: https://github.com/Aptik09/js-exercise-A5-ui-ux
+
+#Assignment 6
+code: https://github.com/Aptik09/Travel-Agency-Website-A6-ui-ux
+Demo: https://travel-agency-website-a6-ui-ux.vercel.app/
