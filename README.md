@@ -21,3 +21,7 @@ Code: https://github.com/Aptik09/js-exercise-A5-ui-ux
 #Assignment 6
 code: https://github.com/Aptik09/Travel-Agency-Website-A6-ui-ux
 Demo: https://travel-agency-website-a6-ui-ux.vercel.app/
+
+#Assignment 7
+Code: https://github.com/Aptik09/TaskFlowManager-A7-Ui-Ux
+Demo: https://taskflowmanager-a7-ui-ux.vercel.app/
