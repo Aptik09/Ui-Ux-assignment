@@ -15,3 +15,5 @@ Demo: https://techfusion-2025-a3-ui-ux.vercel.app/
 code: https://github.com/Aptik09/TechFusion-2026-a4-ui-ux
 Demo: https://techfusion-2026-a4-ui-ux.vercel.app/
 
+#Assignment 5
+Code: https://github.com/Aptik09/js-exercise-A5-ui-ux
