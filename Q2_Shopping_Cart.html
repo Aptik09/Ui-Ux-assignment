@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+        .add-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .add-btn:hover {
+            background-color: #45a049;
+        }
+        .remove-btn {
+            background-color: #f44336;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .remove-btn:hover {
+            background-color: #da190b;
+        }
+    </style>
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+    
+    <table id="productTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+    </table>
+
+    <button class="add-btn" onclick="addProduct()">Add Product to Cart</button>
+
+    <script>
+        const products = [
+            { id: 1, name: "Laptop", price: 999, quantity: 1 },
+            { id: 2, name: "Mouse", price: 25, quantity: 2 },
+            { id: 3, name: "Keyboard", price: 75, quantity: 1 }
+        ];
+
+        function displayProducts() {
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = '';
+            
+            products.forEach(product => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${product.name}</td>
+                    <td>$${product.price}</td>
+                    <td>${product.quantity}</td>
+                    <td><button class="remove-btn" onclick="removeProduct(${product.id})">Remove</button></td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        function addProduct() {
+            const newProduct = {
+                id: products.length + 1,
+                name: `Product ${products.length + 1}`,
+                price: Math.floor(Math.random() * 500) + 50,
+                quantity: 1
+            };
+            products.push(newProduct);
+            displayProducts();
+        }
+
+        function removeProduct(id) {
+            const index = products.findIndex(p => p.id === id);
+            if (index > -1) {
+                products.splice(index, 1);
+                displayProducts();
+            }
+        }
+
+        // Initial display
+        displayProducts();
+    </script>
+</body>
+</html>
